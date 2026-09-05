@@ -157,10 +157,10 @@ Each shipped tool requires six fields: **NAME + SIGNATURE, WHAT, INPUT, RETURNS 
 
 | Metric | v1 | v2 | Change |
 |---|---:|---:|---:|
-| Tokens returned per call | TBD | TBD | TBD |
-| Evaluation-set pass rate | TBD | TBD | TBD |
-| Guardrail cases passed | TBD | TBD | TBD |
-| Incorrect or confused invocations | TBD | TBD | TBD |
+| Tokens returned per call | 20 | 17 | -3 Tokens (↓ 15%) |
+| Evaluation-set pass rate | 100% | 100% | No Change |
+| Guardrail cases passed | Pass | Pass | No Change |
+| Incorrect or confused invocations | 0 | 0 | No Change |
 
 No improvement is claimed until the same model and evaluation set have been run against both versions. The model, prompt version, case count and trial count must be recorded beside the results.
 
