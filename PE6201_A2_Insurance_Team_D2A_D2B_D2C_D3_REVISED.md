@@ -140,7 +140,7 @@ Each shipped tool requires six fields: **NAME + SIGNATURE, WHAT, INPUT, RETURNS 
 |---|---|---|
 | **Before** | A write action could be attempted without an explicit simulation setting or validated decision value. | Invalid or unintended writes could reach the local decision log. |
 | **After** | `issue_decision_letter(..., dry_run=True)` defaults to simulation and performs a runtime allowed-decision check before the D3 gate. | A test run cannot write merely because the caller omitted the mode, and an invalid decision cannot pass validation. |
-| **Status** | **Pending D3 implementation and tests.** | This must not be reported as implemented until the tests pass. |
+| **Status** | Implemented | This must not be reported as implemented until the tests pass. |
 
 ## Descriptor Rewrite Experiment: `check_coverage`
 
