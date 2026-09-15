@@ -1,0 +1,2 @@
+model,trials,decision_accuracy,record_accuracy,decision_accuracy_percent,record_accuracy_percent,average_tool_calls,average_input_tokens,average_output_tokens,average_total_tokens,total_input_tokens,total_output_tokens,total_tokens,tool_errors,repeated_calls,average_seconds
+deepseek/deepseek-v4-flash,60,0.6833333333333333,0.65,68.3,65.0,7.28,13725.42,1521.45,15246.87,823525,91287,914812,2,6,35.44
