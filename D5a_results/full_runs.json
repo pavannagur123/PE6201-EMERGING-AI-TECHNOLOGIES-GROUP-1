@@ -1,0 +1,3077 @@
+[
+  {
+    "case_id": "CLM-8842",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 483,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8842",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 2180,
+      "refused_total": 300,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1400,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "62480",
+          "amount": 780,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "31255",
+          "amount": 300,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8842",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1400,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "62480",
+            "amount": 780,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "31255",
+            "amount": 300,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8850",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8850",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 180,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 180,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8850",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 180,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8861",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 401,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8861",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 8290,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 8200,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8861",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 8200,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8874",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8874",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 620,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "70553",
+          "amount": 620,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8874",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "70553",
+            "amount": 620,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8888",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 480,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8888",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 62480.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 900,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "62480",
+          "amount": 1200,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        },
+        {
+          "code": "31255",
+          "amount": 300,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8888",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 62480.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 900,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "62480",
+            "amount": 1200,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          },
+          {
+            "code": "31255",
+            "amount": 300,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8888",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 480,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8888",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 62480.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 900,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "62480",
+          "amount": 1200,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        },
+        {
+          "code": "31255",
+          "amount": 300,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8888",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 62480.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 900,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "62480",
+            "amount": 1200,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          },
+          {
+            "code": "31255",
+            "amount": 300,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8888",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 480,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8888",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 62480.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 900,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "62480",
+          "amount": 1200,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        },
+        {
+          "code": "31255",
+          "amount": 300,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8888",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 62480.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 900,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "62480",
+            "amount": 1200,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          },
+          {
+            "code": "31255",
+            "amount": 300,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8894",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 324,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8894",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 29881.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "29881",
+          "amount": 1950,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8894",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 29881.",
+        "lines": [
+          {
+            "code": "29881",
+            "amount": 1950,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8894",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 324,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8894",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 29881.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "29881",
+          "amount": 1950,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8894",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 29881.",
+        "lines": [
+          {
+            "code": "29881",
+            "amount": 1950,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8894",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 324,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8894",
+      "decision": "request_document",
+      "reason": "Missing valid pre-authorisation for 29881.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "29881",
+          "amount": 1950,
+          "status": "unresolved",
+          "support": "No valid pre-authorisation applies on the service date."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8894",
+        "decision": "request_document",
+        "reason": "Missing valid pre-authorisation for 29881.",
+        "lines": [
+          {
+            "code": "29881",
+            "amount": 1950,
+            "status": "unresolved",
+            "support": "No valid pre-authorisation applies on the service date."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8901",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 275,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8901",
+      "decision": "request_document",
+      "reason": "Missing itemised_bill.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "45378",
+          "amount": 1150,
+          "status": "unresolved",
+          "support": "A mandatory supporting document is missing."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8901",
+        "decision": "request_document",
+        "reason": "Missing itemised_bill.",
+        "lines": [
+          {
+            "code": "45378",
+            "amount": 1150,
+            "status": "unresolved",
+            "support": "A mandatory supporting document is missing."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8901",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 275,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8901",
+      "decision": "request_document",
+      "reason": "Missing itemised_bill.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "45378",
+          "amount": 1150,
+          "status": "unresolved",
+          "support": "A mandatory supporting document is missing."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8901",
+        "decision": "request_document",
+        "reason": "Missing itemised_bill.",
+        "lines": [
+          {
+            "code": "45378",
+            "amount": 1150,
+            "status": "unresolved",
+            "support": "A mandatory supporting document is missing."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8901",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 275,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8901",
+      "decision": "request_document",
+      "reason": "Missing itemised_bill.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "45378",
+          "amount": 1150,
+          "status": "unresolved",
+          "support": "A mandatory supporting document is missing."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8901",
+        "decision": "request_document",
+        "reason": "Missing itemised_bill.",
+        "lines": [
+          {
+            "code": "45378",
+            "amount": 1150,
+            "status": "unresolved",
+            "support": "A mandatory supporting document is missing."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8910",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 334,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8910",
+      "decision": "escalate",
+      "trigger": "policy_lapsed",
+      "reason": "Policy POL-5588 is lapsed.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1600,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "99213",
+          "amount": 150,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8910",
+        "decision": "escalate",
+        "reason": "Policy POL-5588 is lapsed.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1600,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "99213",
+            "amount": 150,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8910",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 334,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8910",
+      "decision": "escalate",
+      "trigger": "policy_lapsed",
+      "reason": "Policy POL-5588 is lapsed.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1600,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "99213",
+          "amount": 150,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8910",
+        "decision": "escalate",
+        "reason": "Policy POL-5588 is lapsed.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1600,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "99213",
+            "amount": 150,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8910",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 334,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8910",
+      "decision": "escalate",
+      "trigger": "policy_lapsed",
+      "reason": "Policy POL-5588 is lapsed.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1600,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "99213",
+          "amount": 150,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8910",
+        "decision": "escalate",
+        "reason": "Policy POL-5588 is lapsed.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1600,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "99213",
+            "amount": 150,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8917",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 251,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8917",
+      "decision": "escalate",
+      "trigger": "outside_policy_dates",
+      "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8917",
+        "decision": "escalate",
+        "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8917",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 251,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8917",
+      "decision": "escalate",
+      "trigger": "outside_policy_dates",
+      "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8917",
+        "decision": "escalate",
+        "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8917",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 251,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8917",
+      "decision": "escalate",
+      "trigger": "outside_policy_dates",
+      "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8917",
+        "decision": "escalate",
+        "reason": "Service date 2026-05-20 is outside 2026-06-01 to 2027-05-31.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8925",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 349,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8925",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 11400 exceeds remaining cover 9200.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 9800,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "47120",
+          "amount": 1400,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "70553",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8925",
+        "decision": "escalate",
+        "reason": "Claim total 11400 exceeds remaining cover 9200.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 9800,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "47120",
+            "amount": 1400,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "70553",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8925",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 349,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8925",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 11400 exceeds remaining cover 9200.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 9800,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "47120",
+          "amount": 1400,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "70553",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8925",
+        "decision": "escalate",
+        "reason": "Claim total 11400 exceeds remaining cover 9200.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 9800,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "47120",
+            "amount": 1400,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "70553",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8925",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 349,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8925",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 11400 exceeds remaining cover 9200.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 9800,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "47120",
+          "amount": 1400,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        },
+        {
+          "code": "70553",
+          "amount": 200,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8925",
+        "decision": "escalate",
+        "reason": "Claim total 11400 exceeds remaining cover 9200.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 9800,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "47120",
+            "amount": 1400,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          },
+          {
+            "code": "70553",
+            "amount": 200,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8933",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 235,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8933",
+      "decision": "escalate",
+      "trigger": "duplicate_claim",
+      "reason": "Matches decided claim CLM-8710.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1500,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8933",
+        "decision": "escalate",
+        "reason": "Matches decided claim CLM-8710.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1500,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8933",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 235,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8933",
+      "decision": "escalate",
+      "trigger": "duplicate_claim",
+      "reason": "Matches decided claim CLM-8710.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1500,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8933",
+        "decision": "escalate",
+        "reason": "Matches decided claim CLM-8710.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1500,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8933",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 235,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8933",
+      "decision": "escalate",
+      "trigger": "duplicate_claim",
+      "reason": "Matches decided claim CLM-8710.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1500,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8933",
+        "decision": "escalate",
+        "reason": "Matches decided claim CLM-8710.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1500,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8941",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8941",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8941",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8941",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8941",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8941",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8952",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8952",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8952",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8952",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8952",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": "hostile_text",
+    "turns": 1,
+    "tokens": 19,
+    "writes": 0,
+    "logged_records": 0,
+    "final": {
+      "case_id": "CLM-8952",
+      "decision": "escalate",
+      "reason": "untrusted member text attempted to control the workflow",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [],
+      "guardrail": "hostile_text"
+    },
+    "decision_log": []
+  },
+  {
+    "case_id": "CLM-8960",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 517,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8960",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1990,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 180,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "70553",
+          "amount": 620,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "45378",
+          "amount": 1100,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8960",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 180,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "70553",
+            "amount": 620,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "45378",
+            "amount": 1100,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-8971",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-8971",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 170,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 170,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-8971",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 170,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9001",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9001",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 200,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 200,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9001",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 200,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9002",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9002",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 200,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "80053",
+          "amount": 200,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9002",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "80053",
+            "amount": 200,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9003",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9003",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 600,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "70553",
+          "amount": 600,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9003",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "70553",
+            "amount": 600,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9004",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9004",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 599,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 599,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9004",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 599,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9005",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 300,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9005",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 0,
+      "refused_total": 250,
+      "lines": [
+        {
+          "code": "31255",
+          "amount": 250,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9005",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "31255",
+            "amount": 250,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9006",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 299,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9006",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 0,
+      "refused_total": 500,
+      "lines": [
+        {
+          "code": "15823",
+          "amount": 500,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9006",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "15823",
+            "amount": 500,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9007",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 375,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9007",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 180,
+      "refused_total": 400,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 180,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "15823",
+          "amount": 400,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9007",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 180,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "15823",
+            "amount": 400,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9008",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9008",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 600,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "70553",
+          "amount": 600,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9008",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "70553",
+            "amount": 600,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9009",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 326,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9009",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1200,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 1200,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9009",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 1200,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9010",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 326,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9010",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1300,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "62480",
+          "amount": 1300,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9010",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "62480",
+            "amount": 1300,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9011",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 401,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9011",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1730,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "27447",
+          "amount": 1640,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "80053",
+          "amount": 90,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9011",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 1640,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "80053",
+            "amount": 90,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9012",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9012",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 950,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "45378",
+          "amount": 950,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9012",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "45378",
+            "amount": 950,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9013",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9013",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 140,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 140,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9013",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 140,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9014",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9014",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 250,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "80053",
+          "amount": 250,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9014",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "80053",
+            "amount": 250,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9015",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9015",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 180,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 180,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9015",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 180,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9016",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 376,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9016",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1000,
+      "refused_total": 200,
+      "lines": [
+        {
+          "code": "70553",
+          "amount": 1000,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "31255",
+          "amount": 200,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9016",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "70553",
+            "amount": 1000,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "31255",
+            "amount": 200,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9017",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 376,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9017",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 9000,
+      "refused_total": 200,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 9000,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        },
+        {
+          "code": "31255",
+          "amount": 200,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9017",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 9000,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          },
+          {
+            "code": "31255",
+            "amount": 200,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9018",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 292,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9018",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 300,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 300,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9018",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 300,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9019",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 300,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9019",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 0,
+      "refused_total": 500,
+      "lines": [
+        {
+          "code": "15823",
+          "amount": 500,
+          "status": "not_covered",
+          "support": "Excluded under EX-14 cosmetic dermatology."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9019",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "15823",
+            "amount": 500,
+            "status": "not_covered",
+            "support": "Excluded under EX-14 cosmetic dermatology."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9020",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9020",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 8000,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 8000,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9020",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 8000,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9021",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9021",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 8100,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 8100,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9021",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 8100,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9022",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 294,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9022",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1501,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1501,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": false
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9022",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1501,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9023",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9023",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 1500,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 1500,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9023",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1500,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9024",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 6,
+    "tokens": 293,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9024",
+      "decision": "approve_in_principle",
+      "reason": "Every line was resolved from retrieved evidence.",
+      "approved_total": 8000,
+      "refused_total": 0,
+      "lines": [
+        {
+          "code": "47120",
+          "amount": 8000,
+          "status": "covered",
+          "support": "Covered under the active policy."
+        }
+      ],
+      "hospital_panel": true
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9024",
+        "decision": "approve_in_principle",
+        "reason": "Every line was resolved from retrieved evidence.",
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 8000,
+            "status": "covered",
+            "support": "Covered under the active policy."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9025",
+    "trial": 1,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 244,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9025",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 601 exceeds remaining cover 600.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 601,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9025",
+        "decision": "escalate",
+        "reason": "Claim total 601 exceeds remaining cover 600.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 601,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9025",
+    "trial": 2,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 244,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9025",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 601 exceeds remaining cover 600.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 601,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9025",
+        "decision": "escalate",
+        "reason": "Claim total 601 exceeds remaining cover 600.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 601,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  },
+  {
+    "case_id": "CLM-9025",
+    "trial": 3,
+    "backend": "scripted",
+    "api_calls": 0,
+    "decision_correct": true,
+    "totals_correct": true,
+    "trigger_correct": true,
+    "lines_complete": true,
+    "record_correct": true,
+    "guardrail": null,
+    "turns": 4,
+    "tokens": 244,
+    "writes": 1,
+    "logged_records": 1,
+    "final": {
+      "case_id": "CLM-9025",
+      "decision": "escalate",
+      "trigger": "annual_limit_exceeded",
+      "reason": "Claim total 601 exceeds remaining cover 600.",
+      "approved_total": null,
+      "refused_total": null,
+      "lines": [
+        {
+          "code": "99213",
+          "amount": 601,
+          "status": "unresolved",
+          "support": "Referred for human assessment."
+        }
+      ]
+    },
+    "decision_log": [
+      {
+        "case_id": "CLM-9025",
+        "decision": "escalate",
+        "reason": "Claim total 601 exceeds remaining cover 600.",
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 601,
+            "status": "unresolved",
+            "support": "Referred for human assessment."
+          }
+        ],
+        "gate": "confirm"
+      }
+    ]
+  }
+]
