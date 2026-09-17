@@ -1,0 +1,150 @@
+{
+  "case_id": "CLM-9013",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 944,
+  "tool_return_tokens": 303,
+  "input_tokens": 13581,
+  "output_tokens": 329,
+  "total_tokens": 13910,
+  "estimated_cost_usd": 0.00149,
+  "seconds": 3.297,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9013"
+      },
+      "observation": {
+        "claim_id": "CLM-9013",
+        "member_id": "M-7426",
+        "hospital_id": "H-207",
+        "date_of_service": "2026-10-13",
+        "narrative": "Short consultation for seasonal allergy symptoms.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 140
+          }
+        ]
+      },
+      "return_characters": 247,
+      "return_tokens": 81
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-7426"
+      },
+      "observation": {
+        "policy_id": "POL-8300",
+        "product": "Community Care",
+        "status": "active",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "annual_limit": 10000,
+        "used_to_date": 1500,
+        "exclusions": [
+          {
+            "code": "31255",
+            "rule": "EX-14 cosmetic dermatology"
+          },
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 8500
+      },
+      "return_characters": 322,
+      "return_tokens": 112
+    },
+    {
+      "tool_turn": 3,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-8300",
+        "procedure_code": "99213"
+      },
+      "observation": {
+        "code": "99213",
+        "description": "Outpatient consultation",
+        "requires_preauth": false,
+        "excluded": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 129,
+      "return_tokens": 35
+    },
+    {
+      "tool_turn": 4,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-207"
+      },
+      "observation": {
+        "hospital_id": "H-207",
+        "name": "Mount Elizabeth East",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9013"
+      },
+      "observation": {
+        "claim_id": "CLM-9013",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "99213",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9013",
+    "decision": "approve_in_principle",
+    "reason": "The procedure code 99213 for outpatient consultation is covered and no required documents are missing.",
+    "approved_total": 140,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "99213",
+        "amount": 140,
+        "status": "covered",
+        "support": "Procedure is not excluded, requires no preauthorization, and has no missing documents."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

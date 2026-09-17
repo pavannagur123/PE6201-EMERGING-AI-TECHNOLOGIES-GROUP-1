@@ -1,0 +1,149 @@
+{
+  "case_id": "CLM-9014",
+  "version": "V2",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 941,
+  "tool_return_tokens": 302,
+  "input_tokens": 13837,
+  "output_tokens": 333,
+  "total_tokens": 14170,
+  "estimated_cost_usd": 0.001517,
+  "seconds": 2.604,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9014"
+      },
+      "observation": {
+        "claim_id": "CLM-9014",
+        "member_id": "M-7426",
+        "hospital_id": "H-114",
+        "date_of_service": "2026-10-14",
+        "narrative": "Routine metabolic blood panel requested during an annual health review.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "80053",
+            "amount": 250
+          }
+        ]
+      },
+      "return_characters": 269,
+      "return_tokens": 85
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-7426"
+      },
+      "observation": {
+        "policy_id": "POL-8300",
+        "product": "Community Care",
+        "status": "active",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "annual_limit": 10000,
+        "used_to_date": 1500,
+        "exclusions": [
+          {
+            "code": "31255",
+            "rule": "EX-14 cosmetic dermatology"
+          },
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 8500
+      },
+      "return_characters": 322,
+      "return_tokens": 112
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-114"
+      },
+      "observation": {
+        "hospital_id": "H-114",
+        "name": "Riverside General",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 85,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-8300",
+        "procedure_code": "80053"
+      },
+      "observation": {
+        "code": "80053",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9014"
+      },
+      "observation": {
+        "claim_id": "CLM-9014",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "80053",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9014",
+    "decision": "approve_in_principle",
+    "reason": "The claim line for procedure code 80053 is covered and no required documents are missing.",
+    "approved_total": 250,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "80053",
+        "amount": 250,
+        "status": "covered",
+        "support": "Procedure is covered under the policy and no required documents are missing."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

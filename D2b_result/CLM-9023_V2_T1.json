@@ -1,0 +1,151 @@
+{
+  "case_id": "CLM-9023",
+  "version": "V2",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 988,
+  "tool_return_tokens": 315,
+  "input_tokens": 13882,
+  "output_tokens": 332,
+  "total_tokens": 14214,
+  "estimated_cost_usd": 0.001521,
+  "seconds": 2.739,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9023"
+      },
+      "observation": {
+        "claim_id": "CLM-9023",
+        "member_id": "M-2214",
+        "hospital_id": "H-114",
+        "date_of_service": "2026-10-23",
+        "narrative": "Emergency appendix operation. This is the first submission for this admission.",
+        "documents": [
+          "itemised_bill",
+          "discharge_summary"
+        ],
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1500
+          }
+        ]
+      },
+      "return_characters": 298,
+      "return_tokens": 93
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-2214"
+      },
+      "observation": {
+        "policy_id": "POL-3310",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "annual_limit": 12000,
+        "used_to_date": 2800,
+        "exclusions": [
+          {
+            "code": "31255",
+            "rule": "EX-14 cosmetic dermatology"
+          },
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 9200
+      },
+      "return_characters": 319,
+      "return_tokens": 112
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-114"
+      },
+      "observation": {
+        "hospital_id": "H-114",
+        "name": "Riverside General",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 85,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-3310",
+        "procedure_code": "47120"
+      },
+      "observation": {
+        "code": "47120",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9023"
+      },
+      "observation": {
+        "claim_id": "CLM-9023",
+        "attached_documents": [
+          "discharge_summary",
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "47120",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 179,
+      "return_tokens": 52
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9023",
+    "decision": "approve_in_principle",
+    "reason": "The claim line for procedure code 47120 is covered and no required documents are missing.",
+    "approved_total": 1500,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "47120",
+        "amount": 1500,
+        "status": "covered",
+        "support": "Procedure is covered under the policy and no required documents are missing."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

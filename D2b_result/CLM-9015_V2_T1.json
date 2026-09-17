@@ -1,0 +1,140 @@
+{
+  "case_id": "CLM-9015",
+  "version": "V2",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 836,
+  "tool_return_tokens": 266,
+  "input_tokens": 13660,
+  "output_tokens": 326,
+  "total_tokens": 13986,
+  "estimated_cost_usd": 0.001496,
+  "seconds": 3.31,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9015"
+      },
+      "observation": {
+        "claim_id": "CLM-9015",
+        "member_id": "M-5502",
+        "hospital_id": "H-330",
+        "date_of_service": "2026-10-15",
+        "narrative": "Walk-in consultation at the nearest specialist centre for lower back discomfort.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 180
+          }
+        ]
+      },
+      "return_characters": 278,
+      "return_tokens": 87
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-5502"
+      },
+      "observation": {
+        "policy_id": "POL-6001",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-06-01",
+        "end_date": "2027-05-31",
+        "annual_limit": 15000,
+        "used_to_date": 0,
+        "exclusions": [],
+        "remaining": 15000
+      },
+      "return_characters": 205,
+      "return_tokens": 75
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-330"
+      },
+      "observation": {
+        "hospital_id": "H-330",
+        "name": "Bayfront Specialist",
+        "panel": false,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-6001",
+        "procedure_code": "99213"
+      },
+      "observation": {
+        "code": "99213",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9015"
+      },
+      "observation": {
+        "claim_id": "CLM-9015",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "99213",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9015",
+    "decision": "approve_in_principle",
+    "reason": "The claim line for procedure code 99213 is covered and no additional documents are required.",
+    "approved_total": 180,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "99213",
+        "amount": 180,
+        "status": "covered",
+        "support": "Procedure is covered under the policy and no additional documents are missing."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

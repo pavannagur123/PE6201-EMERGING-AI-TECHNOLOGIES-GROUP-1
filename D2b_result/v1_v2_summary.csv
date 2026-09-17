@@ -1,0 +1,3 @@
+version,trials,decision_accuracy,record_accuracy,average_tool_calls,average_tool_return_tokens_per_call,average_input_tokens,average_output_tokens,average_total_tokens,total_estimated_cost_usd,tool_errors,repeated_calls,average_seconds,decision_accuracy_percent,record_accuracy_percent,guardrail_cases,guardrail_cases_passed
+V1,60,0.45,0.4166666666666667,5.666666666666667,59.54117647058823,15113.95,380.6333333333333,15494.583333333334,0.099823,0,0,4.1788,45.0,41.7,5,5
+V2,60,0.6333333333333333,0.5166666666666667,5.55,59.030030030030034,15215.516666666666,384.4166666666667,15599.933333333332,0.100515,0,0,4.052066666666667,63.3,51.7,5,5
