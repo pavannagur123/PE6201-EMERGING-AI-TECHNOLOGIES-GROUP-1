@@ -1,0 +1,2 @@
+index,model,trials,decision_accuracy,record_accuracy,decision_accuracy_percent,record_accuracy_percent,average_tool_calls,average_input_tokens,average_output_tokens,average_total_tokens,total_input_tokens,total_output_tokens,total_tokens,tool_errors,repeated_calls,average_seconds
+1,openai/gpt-5.6-luna,60,0.833333333,0.8,83.3,80,7.02,7664.2,522.83,8187.03,459852,31370,491222,15,0,9.78
