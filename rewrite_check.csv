@@ -1,2 +1,0 @@
-changed_tool,v1_return_shape,v2_return_shape,other_descriptors_changed,tool_token_count_method
-check_coverage,"code, description, requires_preauth, excluded, exclusion_rule","code, coverage_status, preauthorisation_required, exclusion_rule",0,cl100k_base proxy
