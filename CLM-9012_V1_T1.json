@@ -1,0 +1,158 @@
+{
+  "case_id": "CLM-9012",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 7,
+  "tool_turns": 6,
+  "tool_calls": 6,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 881,
+  "tool_return_tokens": 286,
+  "input_tokens": 15960,
+  "output_tokens": 325,
+  "total_tokens": 16285,
+  "estimated_cost_usd": 0.001726,
+  "seconds": 3.576,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9012"
+      },
+      "observation": {
+        "claim_id": "CLM-9012",
+        "member_id": "M-5502",
+        "hospital_id": "H-114",
+        "date_of_service": "2026-10-12",
+        "narrative": "Day-case colonoscopy arranged after a positive screening result.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "45378",
+            "amount": 950
+          }
+        ]
+      },
+      "return_characters": 262,
+      "return_tokens": 86
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-5502"
+      },
+      "observation": {
+        "policy_id": "POL-6001",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-06-01",
+        "end_date": "2027-05-31",
+        "annual_limit": 15000,
+        "used_to_date": 0,
+        "exclusions": [],
+        "remaining": 15000
+      },
+      "return_characters": 205,
+      "return_tokens": 75
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-114"
+      },
+      "observation": {
+        "hospital_id": "H-114",
+        "name": "Riverside General",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 85,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-6001",
+        "procedure_code": "45378"
+      },
+      "observation": {
+        "code": "45378",
+        "description": "Diagnostic colonoscopy",
+        "requires_preauth": false,
+        "excluded": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 128,
+      "return_tokens": 36
+    },
+    {
+      "tool_turn": 5,
+      "tool": "get_preauthorisation",
+      "arguments": {
+        "member_id": "M-5502",
+        "procedure_code": "45378",
+        "date_of_service": "2026-10-12"
+      },
+      "observation": {
+        "matches": [],
+        "valid": []
+      },
+      "return_characters": 28,
+      "return_tokens": 9
+    },
+    {
+      "tool_turn": 6,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9012"
+      },
+      "observation": {
+        "claim_id": "CLM-9012",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "45378",
+            "required": [
+              "itemised_bill"
+            ],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 173,
+      "return_tokens": 51
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9012",
+    "decision": "approve_in_principle",
+    "reason": "The procedure is covered, no preauthorization was required, and all necessary documents are attached.",
+    "approved_total": 950,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "45378",
+        "amount": 950,
+        "status": "covered",
+        "support": "Procedure is covered by the policy and all required documents are present."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

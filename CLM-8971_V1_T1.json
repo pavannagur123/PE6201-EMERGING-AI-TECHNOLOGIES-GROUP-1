@@ -1,0 +1,146 @@
+{
+  "case_id": "CLM-8971",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 852,
+  "tool_return_tokens": 281,
+  "input_tokens": 13449,
+  "output_tokens": 285,
+  "total_tokens": 13734,
+  "estimated_cost_usd": 0.001459,
+  "seconds": 2.92,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-8971"
+      },
+      "observation": {
+        "claim_id": "CLM-8971",
+        "member_id": "M-3390",
+        "hospital_id": "H-207",
+        "date_of_service": "2026-09-16",
+        "narrative": "Consultation only.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 170
+          }
+        ]
+      },
+      "return_characters": 216,
+      "return_tokens": 78
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-3390"
+      },
+      "observation": {
+        "policy_id": "POL-4102",
+        "product": "Shield Basic",
+        "status": "active",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "annual_limit": 6000,
+        "used_to_date": 5400,
+        "exclusions": [
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 600
+      },
+      "return_characters": 261,
+      "return_tokens": 93
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-207"
+      },
+      "observation": {
+        "hospital_id": "H-207",
+        "name": "Mount Elizabeth East",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-4102",
+        "procedure_code": "99213"
+      },
+      "observation": {
+        "code": "99213",
+        "description": "Outpatient consultation",
+        "requires_preauth": false,
+        "excluded": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 129,
+      "return_tokens": 35
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-8971"
+      },
+      "observation": {
+        "claim_id": "CLM-8971",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "99213",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-8971",
+    "decision": "approve_in_principle",
+    "reason": "The procedure code 99213 for outpatient consultation is covered under the policy, no preauthorization is required, and all necessary documents are attached.",
+    "approved_total": 170,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "99213",
+        "amount": 170,
+        "status": "covered",
+        "support": "Procedure is covered, no preauthorization needed, and all required documents are present."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

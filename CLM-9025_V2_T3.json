@@ -1,0 +1,145 @@
+{
+  "case_id": "CLM-9025",
+  "version": "V2",
+  "trial": 3,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 855,
+  "tool_return_tokens": 280,
+  "input_tokens": 13726,
+  "output_tokens": 469,
+  "total_tokens": 14195,
+  "estimated_cost_usd": 0.00156,
+  "seconds": 3.495,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9025"
+      },
+      "observation": {
+        "claim_id": "CLM-9025",
+        "member_id": "M-3390",
+        "hospital_id": "H-114",
+        "date_of_service": "2026-10-25",
+        "narrative": "Consultation and review of laboratory results.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "99213",
+            "amount": 601
+          }
+        ]
+      },
+      "return_characters": 244,
+      "return_tokens": 82
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-3390"
+      },
+      "observation": {
+        "policy_id": "POL-4102",
+        "product": "Shield Basic",
+        "status": "active",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "annual_limit": 6000,
+        "used_to_date": 5400,
+        "exclusions": [
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 600
+      },
+      "return_characters": 261,
+      "return_tokens": 93
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-114"
+      },
+      "observation": {
+        "hospital_id": "H-114",
+        "name": "Riverside General",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 85,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-4102",
+        "procedure_code": "99213"
+      },
+      "observation": {
+        "code": "99213",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9025"
+      },
+      "observation": {
+        "claim_id": "CLM-9025",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "99213",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9025",
+    "decision": "approve_in_principle",
+    "reason": "The claim line for procedure code 99213 is covered and no required documents are missing.",
+    "approved_total": 601,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "99213",
+        "amount": 601,
+        "status": "covered",
+        "support": "Procedure is covered under the policy and no required documents are missing."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": false,
+  "totals_correct": false,
+  "lines_complete": true,
+  "trigger_correct": false,
+  "record_correct": false
+}

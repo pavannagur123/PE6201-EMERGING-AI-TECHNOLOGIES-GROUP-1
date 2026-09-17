@@ -1,0 +1,168 @@
+{
+  "case_id": "CLM-9006",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 7,
+  "tool_turns": 6,
+  "tool_calls": 6,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 947,
+  "tool_return_tokens": 304,
+  "input_tokens": 16166,
+  "output_tokens": 380,
+  "total_tokens": 16546,
+  "estimated_cost_usd": 0.001769,
+  "seconds": 3.328,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9006"
+      },
+      "observation": {
+        "claim_id": "CLM-9006",
+        "member_id": "M-3390",
+        "hospital_id": "H-207",
+        "date_of_service": "2026-10-06",
+        "narrative": "Upper eyelid surgery requested for cosmetic reasons.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "15823",
+            "amount": 500
+          }
+        ]
+      },
+      "return_characters": 250,
+      "return_tokens": 83
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-3390"
+      },
+      "observation": {
+        "policy_id": "POL-4102",
+        "product": "Shield Basic",
+        "status": "active",
+        "start_date": "2026-01-01",
+        "end_date": "2026-12-31",
+        "annual_limit": 6000,
+        "used_to_date": 5400,
+        "exclusions": [
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 600
+      },
+      "return_characters": 261,
+      "return_tokens": 93
+    },
+    {
+      "tool_turn": 3,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-4102",
+        "procedure_code": "15823"
+      },
+      "observation": {
+        "code": "15823",
+        "description": "Blepharoplasty (cosmetic)",
+        "requires_preauth": false,
+        "excluded": true,
+        "exclusion_rule": "EX-14 cosmetic dermatology"
+      },
+      "return_characters": 154,
+      "return_tokens": 47
+    },
+    {
+      "tool_turn": 4,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-207"
+      },
+      "observation": {
+        "hospital_id": "H-207",
+        "name": "Mount Elizabeth East",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9006"
+      },
+      "observation": {
+        "claim_id": "CLM-9006",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [],
+        "missing_documents": []
+      },
+      "return_characters": 110,
+      "return_tokens": 32
+    },
+    {
+      "tool_turn": 6,
+      "tool": "issue_decision_letter",
+      "arguments": {
+        "decision_record": {
+          "case_id": "CLM-9006",
+          "decision": "request_document",
+          "reason": "The procedure is excluded under the policy due to EX-14 cosmetic dermatology exclusion rule.",
+          "approved_total": null,
+          "refused_total": null,
+          "lines": [
+            {
+              "code": "15823",
+              "amount": 500,
+              "status": "not_covered",
+              "support": "Policy exclusion rule EX-14"
+            }
+          ]
+        }
+      },
+      "observation": {
+        "status": "awaiting_confirmation",
+        "gate": "human_confirmation",
+        "recorded": false
+      },
+      "return_characters": 84,
+      "return_tokens": 21
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9006",
+    "decision": "request_document",
+    "reason": "The procedure is excluded under the policy due to EX-14 cosmetic dermatology exclusion rule.",
+    "approved_total": null,
+    "refused_total": null,
+    "lines": [
+      {
+        "code": "15823",
+        "amount": 500,
+        "status": "not_covered",
+        "support": "Policy exclusion rule EX-14"
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": false,
+  "totals_correct": false,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": false
+}
