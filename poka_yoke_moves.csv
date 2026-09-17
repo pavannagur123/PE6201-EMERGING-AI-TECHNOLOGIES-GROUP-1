@@ -1,4 +1,0 @@
-before,after,makes_impossible
-free-form identifier strings,"schema patterns for claim, member, policy, hospital and procedure IDs",sending an incorrectly formatted identifier to a tool
-tools accept undeclared arguments,additionalProperties=false on every tool input,silently accepting an invented argument
-model can claim it confirmed the action,the live tool exposes no confirmation argument and always stops at the gate,issuing a letter from this evaluation without human confirmation
