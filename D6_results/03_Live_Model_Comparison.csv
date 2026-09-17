@@ -1,0 +1,6 @@
+rank,model,trials,decision_accuracy,record_accuracy,avg_input_tokens,avg_output_tokens,input_price_per_1m,output_price_per_1m,avg_ai_cost,expected_fallback_cost,cost_per_claim,monthly_cost,evidence_status
+1,openai/gpt-5.6-luna,60,0.8333333333,0.8,7664.2,522.83,0.2,1.2,0.002160236,1.52,1.522160236,12177.281888,summary_plus_saved_notebook
+2,z-ai/glm-5.3-flash,60,0.75,0.7333333333,9531.9,1209.93,0.075,0.25,0.001017375,2.0266666669,2.0276840419,16221.4723354,verified_40_cases_60_rows
+3,deepseek/deepseek-v4-flash,60,0.6666666667,0.6666666667,15141.4,1683.52,0.0679,0.168,0.0013109324,2.5333333331,2.5346442655,20277.154124,summary_plus_saved_notebook
+4,inception/mercury-2.5,60,0.6833333333,0.6333333333,14205.33,1445.52,0.04,0.15,0.0007850412,2.7866666669,2.7874517081,22299.613665,summary_csv_plus_saved_notebook
+5,qwen/qwen-2.5-7b-instruct,60,0.616667,0.55,15243.55,399.2,0.1,0.4,0.001684035,3.42,3.421684035,27373.47228,pavan_notebook_v2_summary_60_trials
