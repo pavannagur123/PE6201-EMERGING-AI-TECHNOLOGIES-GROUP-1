@@ -1,0 +1,2 @@
+backend,api_calls,tests,passed,pass_rate_percent,autonomy,step_cap,budget_cap
+scripted,0,10,10,100.0,confirm,8,60000
