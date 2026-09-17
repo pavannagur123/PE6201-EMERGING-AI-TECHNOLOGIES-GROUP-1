@@ -1,0 +1,191 @@
+{
+  "case_id": "CLM-8861",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 7,
+  "tool_turns": 6,
+  "tool_calls": 6,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 1244,
+  "tool_return_tokens": 425,
+  "input_tokens": 16361,
+  "output_tokens": 401,
+  "total_tokens": 16762,
+  "estimated_cost_usd": 0.001797,
+  "seconds": 4.711,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-8861"
+      },
+      "observation": {
+        "claim_id": "CLM-8861",
+        "member_id": "M-5502",
+        "hospital_id": "H-207",
+        "date_of_service": "2026-09-05",
+        "narrative": "Knee replacement, planned months ago.",
+        "documents": [
+          "itemised_bill",
+          "discharge_summary"
+        ],
+        "lines": [
+          {
+            "code": "27447",
+            "amount": 8200
+          },
+          {
+            "code": "80053",
+            "amount": 90
+          }
+        ]
+      },
+      "return_characters": 290,
+      "return_tokens": 101
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-5502"
+      },
+      "observation": {
+        "policy_id": "POL-6001",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-06-01",
+        "end_date": "2027-05-31",
+        "annual_limit": 15000,
+        "used_to_date": 0,
+        "exclusions": [],
+        "remaining": 15000
+      },
+      "return_characters": 205,
+      "return_tokens": 75
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-207"
+      },
+      "observation": {
+        "hospital_id": "H-207",
+        "name": "Mount Elizabeth East",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-6001",
+        "procedure_code": "27447"
+      },
+      "observation": {
+        "code": "27447",
+        "description": "Total knee replacement",
+        "requires_preauth": true,
+        "excluded": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 127,
+      "return_tokens": 35
+    },
+    {
+      "tool_turn": 5,
+      "tool": "get_preauthorisation",
+      "arguments": {
+        "member_id": "M-5502",
+        "procedure_code": "27447",
+        "date_of_service": "2026-09-05"
+      },
+      "observation": {
+        "matches": [
+          {
+            "preauth_id": "PA-5702",
+            "member_id": "M-5502",
+            "procedure_code": "27447",
+            "valid_from": "2026-07-01",
+            "valid_to": "2026-12-31"
+          }
+        ],
+        "valid": [
+          {
+            "preauth_id": "PA-5702",
+            "member_id": "M-5502",
+            "procedure_code": "27447",
+            "valid_from": "2026-07-01",
+            "valid_to": "2026-12-31"
+          }
+        ]
+      },
+      "return_characters": 286,
+      "return_tokens": 114
+    },
+    {
+      "tool_turn": 6,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-8861"
+      },
+      "observation": {
+        "claim_id": "CLM-8861",
+        "attached_documents": [
+          "discharge_summary",
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "27447",
+            "required": [
+              "discharge_summary"
+            ],
+            "missing": []
+          },
+          {
+            "code": "80053",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 248,
+      "return_tokens": 72
+    }
+  ],
+  "final": {
+    "case_id": "CLM-8861",
+    "decision": "approve_in_principle",
+    "reason": "All required documents are attached, and the procedure is covered with preauthorization. The remaining annual limit of $15,000 is sufficient.",
+    "approved_total": 8290,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "27447",
+        "amount": 8200,
+        "status": "covered",
+        "support": "Preauthorization exists for the procedure code 27447 within the valid period."
+      },
+      {
+        "code": "80053",
+        "amount": 90,
+        "status": "covered",
+        "support": "The procedure code 80053 is not subject to preauthorization and is covered by the policy."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}

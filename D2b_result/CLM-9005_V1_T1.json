@@ -1,0 +1,157 @@
+{
+  "case_id": "CLM-9005",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 941,
+  "tool_return_tokens": 299,
+  "input_tokens": 13770,
+  "output_tokens": 532,
+  "total_tokens": 14302,
+  "estimated_cost_usd": 0.00159,
+  "seconds": 5.161,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9005"
+      },
+      "observation": {
+        "claim_id": "CLM-9005",
+        "member_id": "M-2214",
+        "hospital_id": "H-330",
+        "date_of_service": "2026-10-05",
+        "narrative": "Elective skin resurfacing performed to improve the appearance of old acne scars.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "31255",
+            "amount": 250
+          }
+        ]
+      },
+      "return_characters": 278,
+      "return_tokens": 90
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-2214"
+      },
+      "observation": {
+        "policy_id": "POL-3310",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "annual_limit": 12000,
+        "used_to_date": 2800,
+        "exclusions": [
+          {
+            "code": "31255",
+            "rule": "EX-14 cosmetic dermatology"
+          },
+          {
+            "code": "15823",
+            "rule": "EX-14 cosmetic dermatology"
+          }
+        ],
+        "remaining": 9200
+      },
+      "return_characters": 319,
+      "return_tokens": 112
+    },
+    {
+      "tool_turn": 3,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-3310",
+        "procedure_code": "31255"
+      },
+      "observation": {
+        "code": "31255",
+        "description": "Cosmetic dermabrasion",
+        "requires_preauth": false,
+        "excluded": true,
+        "exclusion_rule": "EX-14 cosmetic dermatology"
+      },
+      "return_characters": 150,
+      "return_tokens": 44
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9005"
+      },
+      "observation": {
+        "claim_id": "CLM-9005",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [],
+        "missing_documents": []
+      },
+      "return_characters": 110,
+      "return_tokens": 32
+    },
+    {
+      "tool_turn": 5,
+      "tool": "issue_decision_letter",
+      "arguments": {
+        "decision_record": {
+          "case_id": "CLM-9005",
+          "decision": "request_document",
+          "reason": "The procedure code 31255 is excluded under the policy due to EX-14 cosmetic dermatology exclusion rule. No additional documents are required.",
+          "approved_total": null,
+          "refused_total": null,
+          "lines": [
+            {
+              "code": "31255",
+              "amount": 250,
+              "status": "not_covered",
+              "support": "Policy exclusion rule EX-14 cosmetic dermatology"
+            }
+          ]
+        }
+      },
+      "observation": {
+        "status": "awaiting_confirmation",
+        "gate": "human_confirmation",
+        "recorded": false
+      },
+      "return_characters": 84,
+      "return_tokens": 21
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9005",
+    "decision": "request_document",
+    "reason": "The procedure code 31255 is excluded under the policy due to EX-14 cosmetic dermatology exclusion rule. No additional documents are required.",
+    "approved_total": null,
+    "refused_total": null,
+    "lines": [
+      {
+        "code": "31255",
+        "amount": 250,
+        "status": "not_covered",
+        "support": "Policy exclusion rule EX-14 cosmetic dermatology"
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": false,
+  "totals_correct": false,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": false
+}

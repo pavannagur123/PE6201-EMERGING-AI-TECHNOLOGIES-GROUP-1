@@ -1,0 +1,204 @@
+{
+  "case_id": "CLM-8910",
+  "version": "V2",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 8,
+  "tool_turns": 7,
+  "tool_calls": 7,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 1208,
+  "tool_return_tokens": 386,
+  "input_tokens": 19266,
+  "output_tokens": 474,
+  "total_tokens": 19740,
+  "estimated_cost_usd": 0.002116,
+  "seconds": 5.491,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-8910"
+      },
+      "observation": {
+        "claim_id": "CLM-8910",
+        "member_id": "M-4471",
+        "hospital_id": "H-114",
+        "date_of_service": "2026-09-11",
+        "narrative": "Emergency appendix operation.",
+        "documents": [
+          "itemised_bill",
+          "discharge_summary"
+        ],
+        "lines": [
+          {
+            "code": "47120",
+            "amount": 1600
+          },
+          {
+            "code": "80053",
+            "amount": 90
+          },
+          {
+            "code": "99213",
+            "amount": 150
+          }
+        ]
+      },
+      "return_characters": 316,
+      "return_tokens": 110
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-4471"
+      },
+      "observation": {
+        "policy_id": "POL-5588",
+        "product": "Shield Plus",
+        "status": "lapsed",
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "annual_limit": 12000,
+        "used_to_date": 900,
+        "exclusions": [],
+        "remaining": 11100
+      },
+      "return_characters": 207,
+      "return_tokens": 76
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-114"
+      },
+      "observation": {
+        "hospital_id": "H-114",
+        "name": "Riverside General",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 85,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-5588",
+        "procedure_code": "47120"
+      },
+      "observation": {
+        "code": "47120",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-5588",
+        "procedure_code": "80053"
+      },
+      "observation": {
+        "code": "80053",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 6,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-5588",
+        "procedure_code": "99213"
+      },
+      "observation": {
+        "code": "99213",
+        "coverage_status": "covered",
+        "preauthorisation_required": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 107,
+      "return_tokens": 29
+    },
+    {
+      "tool_turn": 7,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-8910"
+      },
+      "observation": {
+        "claim_id": "CLM-8910",
+        "attached_documents": [
+          "discharge_summary",
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "47120",
+            "required": [],
+            "missing": []
+          },
+          {
+            "code": "80053",
+            "required": [],
+            "missing": []
+          },
+          {
+            "code": "99213",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 279,
+      "return_tokens": 84
+    }
+  ],
+  "final": {
+    "case_id": "CLM-8910",
+    "decision": "approve_in_principle",
+    "reason": "All procedures are covered and no required documents are missing.",
+    "approved_total": 1850,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "47120",
+        "amount": 1600,
+        "status": "covered",
+        "support": "Procedure is covered by the policy."
+      },
+      {
+        "code": "80053",
+        "amount": 90,
+        "status": "covered",
+        "support": "Procedure is covered by the policy."
+      },
+      {
+        "code": "99213",
+        "amount": 150,
+        "status": "covered",
+        "support": "Procedure is covered by the policy."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": false,
+  "totals_correct": false,
+  "lines_complete": true,
+  "trigger_correct": false,
+  "record_correct": false
+}

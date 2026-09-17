@@ -1,0 +1,141 @@
+{
+  "case_id": "CLM-9002",
+  "version": "V1",
+  "trial": 1,
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "api_rounds": 6,
+  "tool_turns": 5,
+  "tool_calls": 5,
+  "tool_errors": 0,
+  "repeated_calls": 0,
+  "tool_return_characters": 841,
+  "tool_return_tokens": 269,
+  "input_tokens": 13390,
+  "output_tokens": 342,
+  "total_tokens": 13732,
+  "estimated_cost_usd": 0.001476,
+  "seconds": 3.738,
+  "trace": [
+    {
+      "tool_turn": 1,
+      "tool": "get_claim",
+      "arguments": {
+        "claim_id": "CLM-9002"
+      },
+      "observation": {
+        "claim_id": "CLM-9002",
+        "member_id": "M-5502",
+        "hospital_id": "H-207",
+        "date_of_service": "2026-10-02",
+        "narrative": "Blood tests requested during a routine medication review.",
+        "documents": [
+          "itemised_bill"
+        ],
+        "lines": [
+          {
+            "code": "80053",
+            "amount": 200
+          }
+        ]
+      },
+      "return_characters": 255,
+      "return_tokens": 83
+    },
+    {
+      "tool_turn": 2,
+      "tool": "lookup_policy",
+      "arguments": {
+        "member_id": "M-5502"
+      },
+      "observation": {
+        "policy_id": "POL-6001",
+        "product": "Shield Plus",
+        "status": "active",
+        "start_date": "2026-06-01",
+        "end_date": "2027-05-31",
+        "annual_limit": 15000,
+        "used_to_date": 0,
+        "exclusions": [],
+        "remaining": 15000
+      },
+      "return_characters": 205,
+      "return_tokens": 75
+    },
+    {
+      "tool_turn": 3,
+      "tool": "lookup_hospital",
+      "arguments": {
+        "hospital_id": "H-207"
+      },
+      "observation": {
+        "hospital_id": "H-207",
+        "name": "Mount Elizabeth East",
+        "panel": true,
+        "country": "SG"
+      },
+      "return_characters": 88,
+      "return_tokens": 28
+    },
+    {
+      "tool_turn": 4,
+      "tool": "check_coverage",
+      "arguments": {
+        "policy_id": "POL-6001",
+        "procedure_code": "80053"
+      },
+      "observation": {
+        "code": "80053",
+        "description": "Comprehensive metabolic panel",
+        "requires_preauth": false,
+        "excluded": false,
+        "exclusion_rule": null
+      },
+      "return_characters": 135,
+      "return_tokens": 36
+    },
+    {
+      "tool_turn": 5,
+      "tool": "check_required_documents",
+      "arguments": {
+        "claim_id": "CLM-9002"
+      },
+      "observation": {
+        "claim_id": "CLM-9002",
+        "attached_documents": [
+          "itemised_bill"
+        ],
+        "by_procedure": [
+          {
+            "code": "80053",
+            "required": [],
+            "missing": []
+          }
+        ],
+        "missing_documents": []
+      },
+      "return_characters": 158,
+      "return_tokens": 47
+    }
+  ],
+  "final": {
+    "case_id": "CLM-9002",
+    "decision": "approve_in_principle",
+    "reason": "The procedure code 80053 is covered, no preauthorization required, and all necessary documents are attached.",
+    "approved_total": 200,
+    "refused_total": 0,
+    "lines": [
+      {
+        "code": "80053",
+        "amount": 200,
+        "status": "covered",
+        "support": "The procedure is within the policy coverage and no preauthorization was required. All necessary documents are attached."
+      }
+    ]
+  },
+  "error": null,
+  "decision_correct": true,
+  "totals_correct": true,
+  "lines_complete": true,
+  "trigger_correct": true,
+  "record_correct": true
+}
