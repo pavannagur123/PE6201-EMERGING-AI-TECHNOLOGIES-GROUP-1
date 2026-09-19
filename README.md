@@ -35,3 +35,8 @@ Generated tables are written to `D2c_results/`, `D3_result/`, `D4_results/`, `D5
 ## Safety boundary
 
 All records are synthetic. Read tools access local fixture files. The gated decision action writes only a simulated local record and never contacts a member or live insurer system.
+
+## V2 Rerun Results and Selected Run for Calculations
+
+V2 was rerun, and both runs are included in the repository. The report and cost calculations use the earlier run consistently. Differences between the saved results reflect variation across runs of the same V2 configuration, not a change in the version.
+
