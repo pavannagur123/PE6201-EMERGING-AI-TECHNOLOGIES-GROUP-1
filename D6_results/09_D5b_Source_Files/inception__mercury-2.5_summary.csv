@@ -1,2 +1,0 @@
-model,trials,decision_accuracy,record_accuracy,decision_accuracy_percent,record_accuracy_percent,average_tool_calls,average_input_tokens,average_output_tokens,average_total_tokens,total_input_tokens,total_output_tokens,total_tokens,tool_errors,repeated_calls,average_seconds
-inception/mercury-2.5,60,0.6833333333333333,0.6333333333333333,68.3,63.3,7.07,14205.33,1445.52,15650.85,852320,86731,939051,3,3,4.89
