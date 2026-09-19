@@ -18,7 +18,7 @@ All five models report the same 40-case battery and 60 trials. The 10 non-approv
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | openai/gpt-5.6-luna | 60 | 83.3% | 80.0% | 7,664.20 | 522.83 | $0.002160 | $1.522160 | $12,177.28 |
 | 2 | z-ai/glm-5.3-flash | 60 | 75.0% | 73.3% | 9,531.90 | 1,209.93 | $0.001017 | $2.027684 | $16,221.47 |
-| 3 | deepseek/deepseek-v4-flash | 60 | 66.7% | 66.7% | 15,141.40 | 1,683.52 | $0.001311 | $2.534644 | $20,277.15 |
+| 3 | deepseek/deepseek-v4-flash | 60 | 68.3% | 65.0% | 13,725.42 | 1,521.45 | $0.001188 | $2.661188 | $21,289.50 |
 | 4 | inception/mercury-2.5 | 60 | 68.3% | 63.3% | 14,205.33 | 1,445.52 | $0.000785 | $2.787452 | $22,299.61 |
 | 5 | qwen/qwen-2.5-7b-instruct | 60 | 61.7% | 55.0% | 15,243.55 | 399.20 | $0.001684 | $3.421684 | $27,373.47 |
 
@@ -47,11 +47,11 @@ With a US$7.60 fully manual baseline and zero quantified operating cost, Luna's 
 
 ## 4.5 Evidence quality
 
-The GLM notebook explicitly verifies 40 cases, 60 trial rows, 44 complete-record passes, and 644,510 tokens. Pavan's Qwen notebook displays both V1 and V2 60-trial summaries, with the V2 row used here. The DeepSeek, GPT-5.6 Luna, and Mercury submissions provide saved summary outputs and notebooks without a separate raw 60-row result file in the received package. These summaries are sufficient for the D6 comparison, while retaining raw per-trial exports would improve auditability.
+The GLM notebook explicitly verifies 40 cases, 60 trial rows, 44 complete-record passes, and 644,510 tokens. Pavan's Qwen notebook displays both V1 and V2 60-trial summaries, with the V2 row used here. The selected DeepSeek figures come from the team D5b `deepseek__deepseek-v4-flash_summary.csv` (60 trials), not the older DeepSeek notebook summary. GPT-5.6 Luna and Mercury provide saved summary outputs and notebooks. Separate raw 60-row files were not available for these models in the received D6 package. These summaries are sufficient for the D6 comparison, while retaining raw per-trial exports would improve auditability.
 
 ## Sources
 
 - PE6201 A2 FAQ, Problem A costing assumptions.
 - Team D2/D3/D5(a)/D7 notebook and saved outputs.
-- Five member D5(b) model outputs received by 15 September 2026.
+- Five member D5(b) model outputs; DeepSeek uses `d5b/deepseek__deepseek-v4-flash_summary.csv`, and Qwen uses the V2 older-run summary.
 - OpenRouter/listed model prices used as evaluation assumptions on 15 September 2026.

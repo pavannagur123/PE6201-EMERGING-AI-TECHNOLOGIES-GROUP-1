@@ -6,7 +6,7 @@ The five model outputs are sufficient to finish the D6 comparison. Each reports 
 
 | Submission | Model | Confirmed evidence | Strength |
 |---|---|---|---|
-| result chart(1).xlsx + model_deepseek(1).ipynb | deepseek/deepseek-v4-flash | 60 trials; summary accuracy, tokens, tool errors, timing | Summary-level |
+| `d5b/deepseek__deepseek-v4-flash_summary.csv` | deepseek/deepseek-v4-flash | 60 trials; 68.3% decision accuracy, 65.0% complete-record accuracy, average tokens, tool errors, timing | Summary-level |
 | result chart2.xlsx + model_gpt5.6luna.ipynb | openai/gpt-5.6-luna | 60 trials; summary accuracy, tokens, tool errors, timing | Summary-level |
 | inception__mercury-2.5_summary.csv + Mercury2.5.ipynb | inception/mercury-2.5 | 60 trials; summary accuracy, tokens, tool errors, timing | Summary-level |
 | result-final.xlsx + glm.ipynb | z-ai/glm-5.3-flash | 40 cases, 60 trial rows, 44 complete-record passes, 644,510 tokens | Strongest received evidence |
@@ -23,7 +23,7 @@ The five model outputs are sufficient to finish the D6 comparison. Each reports 
 
 ## Important separation
 
-Pavan's Qwen V2 result is the fifth D5(b) model used in the cost ranking. Quincy's downloaded `D2b_results.zip` is a separate Qwen V1 controlled-comparison pass. It demonstrates Quincy's individual work but must not be counted as a sixth live model in D6.
+The D5b DeepSeek summary CSV, not the older `model_deepseek(1).ipynb` output, supplies the final DeepSeek figures. Pavan's Qwen V2 result is the fifth D5(b) model used in the cost ranking. Quincy's downloaded `D2b_results.zip` is a separate Qwen V1 controlled-comparison pass. It demonstrates Quincy's individual work but must not be counted as a sixth live model in D6.
 
 ## Limitations
 
