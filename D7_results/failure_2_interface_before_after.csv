@@ -1,0 +1,3 @@
+version,trials,pass_rate,pass_rate_percent,failure,working_agent_minus,average_return_tokens,observation_cost_usd
+after,60,1.0,100.0,tool_interface,nothing,28.09,2.81e-06
+before,60,0.8833333333333333,88.3,tool_interface,compact typed coverage filter,58.03,5.8e-06

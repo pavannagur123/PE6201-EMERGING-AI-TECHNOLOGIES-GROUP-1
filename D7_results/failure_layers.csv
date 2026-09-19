@@ -1,0 +1,3 @@
+failure,fix_layer,actual_catcher,why,why_not_other_layers
+loop_control,code,action de-duplication,The second identical call is stopped immediately.,A prompt can be ignored; the step cap eventually contains the loop but still pays for repeated turns; the budget cap was not reached.
+tool_interface,tool interface,filtered typed return shape,The stale recommendation cannot reach the model.,"Loop controls do not change a misleading observation, and a prompt warning would leave the landmine in every call."
