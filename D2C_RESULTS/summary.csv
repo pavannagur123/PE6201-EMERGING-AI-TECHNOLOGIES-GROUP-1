@@ -1,3 +1,0 @@
-mode,trials,pass_rate,average_turns,average_tool_calls,average_input_tokens,total_cost_usd,pass_rate_percent
-parallel,60,1.0,3.85,6.1,5129.483333333334,0.030776,100.0
-sequential,60,1.0,6.1,6.1,8171.9,0.04903,100.0
