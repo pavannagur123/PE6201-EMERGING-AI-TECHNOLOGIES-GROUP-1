@@ -6,7 +6,7 @@ This repository contains a single-agent health-insurance claim first-response sy
 
 No API key or network call is required after cloning.
 
-1. Clone the repository and open `A2_SCRIPTED_REPRODUCTION.ipynb` from the repository root.
+1. Clone the repository and open `A2_CODE.ipynb` from the repository root.
 2. Install Python 3.10+ with `pandas` and Jupyter, or open the notebook in Google Colab.
 3. Choose **Run all**. The setup locates `data_A/` and `expected_outcomes_A_team.json` relative to the repository. If required, set environment variable `PE6201_REPO_ROOT` to the clone directory.
 4. Confirm the expected headline results:
@@ -14,7 +14,7 @@ No API key or network call is required after cloning.
    - D3: 10 guardrail tests passed, zero API calls.
    - D4: 40 cases, 10 negative cases, 60 scheduled trials.
    - D5(a): 60/60 complete records passed on the scripted backend, zero API calls.
-   - D7: loop failure 8 turns before versus 2 after; interface pass rate 88.3% before versus 100% after.
+   - D7: loop failure 8 turns before versus 2.
 
 Generated tables are written to `D2c_results/`, `D3_result/`, `D4_results/`, `D5a_results/` and `D7_results/`.
 
