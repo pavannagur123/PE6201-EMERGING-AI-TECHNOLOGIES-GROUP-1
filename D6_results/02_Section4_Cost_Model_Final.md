@@ -43,7 +43,7 @@ This recommendation is economic, not a claim that the model is production-ready.
 
 Holding GPT-5.6 Luna's measured token cost constant, monthly cost is US$18,257.28 at 70% success, US$12,177.28 at 80%, and US$6,097.28 at 90%. A 10-percentage-point change in success changes monthly fallback cost by US$6,080, far more than the measured token-charge differences.
 
-With a US$7.60 fully manual baseline and zero quantified operating cost, Luna's success-rate break-even is `0.002160236 / 7.60 = 0.0284%`. This is not a deployment threshold: unmeasured fixed costs, compliance requirements, harm from incorrect decisions, and the real escalation rate could materially change the result.
+For the required model-to-model break-even, Qwen V2's token cost is US$0.001684035 per run, while Luna's measured total cost is US$1.522160236 per claim. At US$7.60 per failed claim, Qwen needs `1 − (1.522160236 − 0.001684035) / 7.60 = 79.99%` complete-record accuracy to match Luna's expected cost. Its measured 55.0% falls about 25 percentage points short, so Luna remains cheaper overall. This comparison uses the coursework fallback proxy and zero quantified operating cost; it is not a deployment-safety threshold.
 
 ## 4.5 Evidence quality
 
